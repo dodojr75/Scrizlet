@@ -1,1 +1,4 @@
 print("Scrizlet for life")
+
+for i in range(10):
+  print("Scrizlet is love, Scrizlet is life")
