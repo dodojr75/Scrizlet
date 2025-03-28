@@ -1,4 +1,5 @@
 print("Scrizlet for life")
+print("Scrizlet is my soul")
 
 for i in range(10):
   print("Scrizlet is love, Scrizlet is life")
