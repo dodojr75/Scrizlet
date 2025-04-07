@@ -1,5 +1,108 @@
-print("Scrizlet for life")
-print("Scrizlet is my soul")
+import tkinter as tk
+from time import sleep
 
-for i in range(10):
-  print("Scrizlet is love, Scrizlet is life")
+sLi = False
+saved = [] # list for saved objects
+saves = 0 # used for incrementing saves once the saved list = 10 long
+
+def pteradactyl(x): # finger spelling function
+    def nextLetter(i, Letter, letterButton):
+        Letter.destroy() # Removes previous letter
+        letterButton.destroy() # Replaces button to remove letter with a new one
+        if i != len(li)-1:
+            i+=1
+            Letter = tk.Label(Translator, text = li[i], height=5, width=10, font=("Arial", 30)) # displays specific later
+            Letter.grid(row=0,column=0)
+            letterButton = tk.Button(Translator, text="Next Letter", command=lambda:nextLetter(i, Letter, letterButton)) # next letter button
+            letterButton.grid(row=1,column=0)
+        else:
+            Translator.destroy() # destroys the GUI when word is finished
+    i = 0
+    li = list(x) # takes the input from text box and turns it into a list
+    print(li) # debugging, remove later
+    Translator = tk.Tk() #sets up a separate GUI for spelling
+    Letter = tk.Label(Translator, text = li[i], height=5, width=10, font=("Arial", 30))
+    Letter.grid(row=0,column=0)
+    letterButton = tk.Button(Translator, text = "Next Letter", command=lambda:nextLetter(i, Letter, letterButton))
+    letterButton.grid(row=1,column=0)
+
+def mainScreen():
+
+    def getInput(): # Function to recieve the input via text box
+        text = entry.get()
+        print("Input: ", text)
+        pteradactyl(text) # uses the input to finger spell
+
+    def save():
+        global saves # calls the global "saves"
+        text = entry.get() # Uses text box input
+        if len(saved) != 10: 
+            saved.append(text) # Appends saved object to saved list
+        else:
+            saved[saves] = text # Begins the overwriting of the saved list using incrementation of "saves"
+            if (saves == 9):
+                saves = 0
+            else:
+                saves += 1
+        if sLi == True: # if the Saved List has already been accessed, update the saved list when a new save occurs
+            savedList()
+        print(saved) # debugging, remove later
+
+    def savedList():
+        global sLi 
+        sLi = True
+        x = 0
+        y=0
+        entry.grid(row=0, column=1) # Moves every aspect of the GUI over
+        Translate.grid(row=0, column=3)
+        Save.grid(row=1, column=1)
+        Memory.grid(row=1, column=2)
+        
+        for i in saved: # creates a button for every saved item, removing the first one when it hits 10 long
+            xy = y
+            xy = tk.Button(Scrizlet)
+            if xy.winfo_exists == True:
+                xy.destroy
+                phrase = i
+                xy= tk.Button(Scrizlet, text = i, command=lambda:pteradactyl(phrase))
+                xy.grid(row=x, column=0)
+            else:
+                phrase = i
+                xy = tk.Button(Scrizlet, text = i, command= lambda: pteradactyl(phrase))
+                xy.grid(row=x, column=0)
+            if x!=9:
+                y+=1
+                x += 1
+            else:
+                x = 0
+                y = 0
+
+    Disclaimer.destroy() # destroys the disclaimer when the user presses "I understand"
+    DiscClear.destroy()
+    entry = tk.Entry(Scrizlet, width=30) # sets up the text box
+    entry.grid(row=0,column=0)
+
+    Translate = tk.Button(Scrizlet, text="Translate", command=getInput) # creates the button to take the text box input
+    Translate.grid(row=0,column=1)
+    Save = tk.Button(Scrizlet, text="Save For Later", command=save) # creates the save button
+    Save.grid(row=1, column=0)
+    Memory = tk.Button(Scrizlet, text="Saved", command=savedList) # creates the button to view saved items
+    Memory.grid(row=1, column=1)
+
+
+Scrizlet = tk.Tk() # set up rudimentary GUI
+Scrizlet.title("Scrizlet")
+
+# Create the disclaimer and button to remove disclaimer
+Disclaimer = tk.Label(Scrizlet, text="NOTE: \nThis program's sole purpose is to help its users learn ASL.\n" \
+"Anyone who wishes to learn ASL is strongly encouraged\nto research Deaf Culture.\n \n" \
+"Please also note, at its current state, the program is only\n capable of finger spelling, prone to change in the near future." \
+"\nThank you.\n", height=10, width=50, font=("Arial", 25))
+Disclaimer.grid(row=0, column=0)
+DiscClear = tk.Button(Scrizlet, text="I Understand", font=("Arial", 10), command=mainScreen)
+DiscClear.grid(row=1, column=0)
+
+Scrizlet.mainloop() # Runs GUI
+
+
+
