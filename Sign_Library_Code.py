@@ -28,7 +28,6 @@ def batchesSearch(x, y):
     for i in x:                 # to cycle between current and future word lists
         for g in i:             # each individual list (or batch in this case)
             if (y == g):        # check if any words match the requested word
-                print("Found!") # replace this with a way to open the right image/gif
                 return True
     return False
 
