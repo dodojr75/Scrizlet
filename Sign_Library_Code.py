@@ -33,14 +33,4 @@ def batchesSearch(x, y):
 
 def knownWord(li,wrd):          # li will always be batches
     batchBoo = batchesSearch(li,wrd)
-    if (batchBoo == False):
-        # can place the finger signing code here
-        wrd = wrd.lower()
-        wrd = wrd.replace(' ','')
-        li1 = list(wrd)
-        for i in li1: # this is the sub for the rest of the finger sign code
-            print(f"The finger sign of letter {i} goes here!")
-    else:
-        print(f"The shortened version of signing {wrd.lower()} goes here")
-        # under this else statement, the rest of the code for the
-        # shortened signs goes here
+    return batchBoo
