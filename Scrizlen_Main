@@ -1,6 +1,7 @@
 import tkinter as tk
 from time import sleep
 from random import *
+from Sign_Library_Code import *
 
 sLi = False
 saved = [] # list for saved objects
@@ -10,6 +11,40 @@ mastery = [] # used to keep track of mastery progress for each translated term
 learned = [] # used to keep track of all mastered terms
 
 def testKnowledge():
+    def checkMastery(x):
+        m = 0
+        Tester.destroy() # destroys the GUI when word is finished
+        if len(mastery) == 0: # if the mastery list is empty
+            mastery.append(x)
+            Scrizlet.deiconify() # Bring back Scrizlet
+        else:
+            for t in (0,len(mastery)-1): # go through the entire mastery list
+                if mastery[t] == x: # if the term is found
+                    m += 1 
+                    if m == 5: # if the term is found 5 times
+                        Mastered = tk.Toplevel()
+                        masteredLabel = tk.Label(Mastered, height=20, width=50, text=f"You have successfully mastered the term '{x}.'\nCongratulations!\n")
+                        masteredLabel.grid(row=0,column=0)
+                        masteredButton = tk.Button(Mastered, text="Ok.", command=lambda:[Mastered.destroy(),Scrizlet.deiconify()])
+                        masteredButton.grid(row=1, column=0)
+                        learned.append(x) # add the term to the learned list
+                    else:
+                        mastery.append(x) # append to mastery list
+                        Scrizlet.deiconify() # bring back Scrizlet
+    def testWord(word, boxWord):
+        if word == boxWord:
+            notif = tk.Toplevel() # make a new window
+            correctLabel = tk.Label(notif, text="That is correct!", font=("Arial", 25)) # Label for window
+            correctLabel.grid(row=0, column=0)
+            correctClear = tk.Button(notif, text="Ok", command=lambda:(notif.destroy(),checkMastery(word))) # Button to remove window
+            correctClear.grid(row=1, column=0)
+        else:
+            notif = tk.Toplevel()
+            incorrectLabel = tk.Label(notif, text="That is incorrect!", font=("Arial", 25))
+            incorrectLabel.grid(row=0, column=0)
+            incorrectClear = tk.Button(notif, text="Ok", command=notif.destroy())
+            incorrectClear.grid(row=1, column=0)
+            
 
     def testLetter(i, Letter, letterButton):
         text = testBox.get() # uses the text box to get the testing input
@@ -33,25 +68,7 @@ def testKnowledge():
                 letterButton.grid(row=2,column=1)
                 Tester.pack()
             else:
-                m = 0
-                Tester.destroy() # destroys the GUI when word is finished
-                if len(mastery) == 0: # if the mastery list is empty
-                    mastery.append(term)
-                    Scrizlet.deiconify() # Bring back Scrizlet
-                else:
-                    for t in (0,len(mastery)-1): # go through the entire mastery list
-                        if mastery[t] == term: # if the term is found
-                            m += 1 
-                            if m == 5: # if the term is found 5 times
-                                Mastered = tk.Toplevel()
-                                masteredLabel = tk.Label(Mastered, height=20, width=50, text=f"You have successfully mastered the term '{term}.'\nCongratulations!\n")
-                                masteredLabel.grid(row=0,column=0)
-                                masteredButton = tk.Button(Mastered, text="Ok.", command=lambda:[Mastered.destroy(),Scrizlet.deiconify()])
-                                masteredButton.grid(row=1, column=0)
-                                learned.append(term) # add the term to the learned list
-                            else:
-                                mastery.append(term) # append to mastery list
-                                Scrizlet.deiconify() # bring back Scrizlet
+                checkMastery(term)
         else: # if the letter is incorrect
             notif = tk.Toplevel()
             incorrectLabel = tk.Label(notif, text="That is incorrect!", font=("Arial", 25))
@@ -65,23 +82,38 @@ def testKnowledge():
         Scrizlet.withdraw() # Take away Scrizlet
         tested = randint(0, len(translated)-1) # what term are we testing?
         term = translated[tested] 
-        i = 0
-        li = list(term) # takes the input from text box and turns it into a list
-        for l in range(0,len(li)):
-            li[l] = li[l].upper()
-            print(li) # debugging, remove later
-        Tester = tk.Toplevel() #sets up a separate GUI for spelling
-        Tester.title("Test Your Knowledge!")
-        img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Letters\letters{li[i]}.png")
-        Letter = tk.Label(Tester, height=400, width=500, image=img)
-        Letter.grid(row=0,column=0)
-        textLetter = tk.Label(Tester, height=5, width=15, text=f"What letter is this?", font=("Arial", 25))
-        textLetter.grid(row=1, column=0)
-        testBox = tk.Entry(Tester, width=30)
-        testBox.grid(row=2, column=0)
-        letterButton = tk.Button(Tester, text = "Check", command=lambda:testLetter(i, Letter, letterButton))
-        letterButton.grid(row=2,column=1)
-        Tester.pack()
+        is100 = knownWord(batches, term)
+        if is100 == True:
+            Tester = tk.Toplevel() #sets up a separate GUI for spelling
+            Tester.title("Test Your Knowledge!")
+            img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{term}.gif")
+            Letter = tk.Label(Tester, height=400, width=500, image=img)
+            Letter.grid(row=0,column=0)
+            textLetter = tk.Label(Tester, height=5, width=15, text=f"What term is this?", font=("Arial", 25))
+            textLetter.grid(row=1, column=0)
+            testBox = tk.Entry(Tester, width=30)
+            testBox.grid(row=2, column=0)
+            letterButton = tk.Button(Tester, text = "Check", command=lambda:testWord(term, testBox.get()))
+            letterButton.grid(row=2,column=1)
+            Tester.pack()
+        else:
+            i = 0
+            li = list(term) # takes the input from text box and turns it into a list
+            for l in range(0,len(li)):
+                li[l] = li[l].upper()
+                print(li) # debugging, remove later
+            Tester = tk.Toplevel() #sets up a separate GUI for spelling
+            Tester.title("Test Your Knowledge!")
+            img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Letters\letters{li[i]}.png")
+            Letter = tk.Label(Tester, height=400, width=500, image=img)
+            Letter.grid(row=0,column=0)
+            textLetter = tk.Label(Tester, height=5, width=15, text=f"What letter is this?", font=("Arial", 25))
+            textLetter.grid(row=1, column=0)
+            testBox = tk.Entry(Tester, width=30)
+            testBox.grid(row=2, column=0)
+            letterButton = tk.Button(Tester, text = "Check", command=lambda:testLetter(i, Letter, letterButton))
+            letterButton.grid(row=2,column=1)
+            Tester.pack()
 
 def pteradactyl(x): # finger spelling function
     def nextLetter(i, Letter, letterButton):
@@ -102,22 +134,34 @@ def pteradactyl(x): # finger spelling function
             Translator.pack()
         else:
             Translator.destroy() # destroys the GUI when word is finished
-            testKnowledge()
 
     i = 0
-    li = list(x) # takes the input from text box and turns it into a list
-    for l in range(0,len(li)):
-        li[l] = li[l].upper()
-    print(li) # debugging, remove later
-    Translator = tk.Toplevel() #sets up a separate GUI for spelling
-    img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Letters\letters{li[i]}.png")
-    Letter = tk.Label(Translator, height=400, width=500, image=img)
-    Letter.grid(row=0,column=0)
-    textLetter = tk.Label(Translator, height=5, width=10, text=f"{li[i]}", font=("Arial", 25))
-    textLetter.grid(row=1, column=0)
-    letterButton = tk.Button(Translator, text = "Next Letter", command=lambda:nextLetter(i, Letter, letterButton))
-    letterButton.grid(row=2,column=0)
-    Translator.pack()
+
+    is100 = knownWord(batches, x)
+    if is100 == True:
+        Translator = tk.Toplevel() #sets up a separate GUI for spelling
+        img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{x}.gif")
+        Word = tk.Label(Translator, height=400, width=500, image=img)
+        Word.grid(row=0,column=0)
+        textWord = tk.Label(Translator, height=5, width=10, text=f"{x}", font=("Arial", 25))
+        textWord.grid(row=1, column=0)
+        wordButton = tk.Button(Translator, text = "Next", command=Translator.destroy)
+        wordButton.grid(row=2,column=0)
+        Translator.pack()
+    else:
+        li = list(x) # takes the input from text box and turns it into a list
+        for l in range(0,len(li)):
+            li[l] = li[l].upper()
+        print(li) # debugging, remove later
+        Translator = tk.Toplevel() #sets up a separate GUI for spelling
+        img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Letters\letters{li[i]}.png")
+        Letter = tk.Label(Translator, height=400, width=500, image=img)
+        Letter.grid(row=0,column=0)
+        textLetter = tk.Label(Translator, height=5, width=10, text=f"{li[i]}", font=("Arial", 25))
+        textLetter.grid(row=1, column=0)
+        letterButton = tk.Button(Translator, text = "Next Letter", command=lambda:nextLetter(i, Letter, letterButton))
+        letterButton.grid(row=2,column=0)
+        Translator.pack()
 
 def mainScreen():
 
@@ -143,7 +187,8 @@ def mainScreen():
                 translated.append(text)
         print(translated)
         pteradactyl(text) # uses the input to finger spell
-
+        testKnowledge()
+        
     def save():
         global saves # calls the global "saves"
         text = entry.get() # Uses text box input
