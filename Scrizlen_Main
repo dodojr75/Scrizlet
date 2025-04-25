@@ -42,7 +42,7 @@ def testKnowledge():
             notif = tk.Toplevel()
             incorrectLabel = tk.Label(notif, text="That is incorrect!", font=("Arial", 25))
             incorrectLabel.grid(row=0, column=0)
-            incorrectClear = tk.Button(notif, text="Ok", command=notif.destroy())
+            incorrectClear = tk.Button(notif, text="Ok", command=notif.destroy)
             incorrectClear.grid(row=1, column=0)
             
 
@@ -73,7 +73,7 @@ def testKnowledge():
             notif = tk.Toplevel()
             incorrectLabel = tk.Label(notif, text="That is incorrect!", font=("Arial", 25))
             incorrectLabel.grid(row=0, column=0)
-            incorrectClear = tk.Button(notif, text="Ok", command=notif.destroy())
+            incorrectClear = tk.Button(notif, text="Ok", command=notif.destroy)
             incorrectClear.grid(row=1, column=0)
     
     if len(translated) < 3: # If you have translated less than three words
@@ -134,18 +134,19 @@ def pteradactyl(x): # finger spelling function
             Translator.pack()
         else:
             Translator.destroy() # destroys the GUI when word is finished
+            testKnowledge()
 
     i = 0
 
     is100 = knownWord(batches, x)
     if is100 == True:
         Translator = tk.Toplevel() #sets up a separate GUI for spelling
-        img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{x}.gif")
+        img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{x.lower()}.gif")
         Word = tk.Label(Translator, height=400, width=500, image=img)
         Word.grid(row=0,column=0)
         textWord = tk.Label(Translator, height=5, width=10, text=f"{x}", font=("Arial", 25))
         textWord.grid(row=1, column=0)
-        wordButton = tk.Button(Translator, text = "Next", command=Translator.destroy)
+        wordButton = tk.Button(Translator, text = "Next", command=lambda:(Translator.destroy(), testKnowledge()))
         wordButton.grid(row=2,column=0)
         Translator.pack()
     else:
@@ -187,8 +188,8 @@ def mainScreen():
                 translated.append(text)
         print(translated)
         pteradactyl(text) # uses the input to finger spell
-        testKnowledge()
-        
+   
+
     def save():
         global saves # calls the global "saves"
         text = entry.get() # Uses text box input
@@ -318,7 +319,7 @@ Scrizlet.title("Scrizlet")
 # Create the disclaimer and button to remove disclaimer
 Disclaimer = tk.Label(Scrizlet, text="NOTE: \nThis program's sole purpose is to help its users learn ASL.\n" \
 "Anyone who wishes to learn ASL is strongly encouraged\nto research Deaf Culture.\n \n" \
-"Please also note, at its current state, the program is only\n capable of finger spelling, prone to change in the near future." \
+"Please also note, at its current state, the program is only\n capable of finger spelling or translate the\ntop 100 most used words in ASL." \
 "\nThank you.\n", height=10, width=50, font=("Arial", 25))
 Disclaimer.grid(row=0, column=0)
 DiscClear = tk.Button(Scrizlet, text="I Understand", font=("Arial", 10), command=lambda:[Disclaimer.destroy(),DiscClear.destroy(), mainScreen()])
