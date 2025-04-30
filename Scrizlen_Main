@@ -197,9 +197,109 @@ def pteradactyl(x): # finger spelling function
         letterButton.grid(row=2,column=0)
         Translator.pack()
 
+##############################################################################################################
+
+def dinosaurs(ctr, wrdlist):
+    def stegosaurus(ctr, wrdlist, Translator, textLetter):
+        def nextWord(space, spaceButton, ctr, wrdlist):
+            space.destroy()
+            spaceButton.destroy()
+            if (ctr <= len(wrdlist)):
+                batchBoolean = batchesSearch(batches, wrdlist[ctr])
+                if (batchBoolean == False):
+                    pteradactyl(wrdlist[ctr], ctr, wrdlist, Translator)
+                else:
+                    triceratops(wrdlist[ctr], ctr, wrdlist, Translator)
+            else:
+                Translator.destroy()
+        textLetter.destroy()
+        space = tk.Label(Translator, text = "Now, take a breif pause", height = 5, width = 10, font = ("Ariel", 25))
+        space.grid(row = 0, column = 0)
+        spaceLetter = tk.Label(Translator, height = 5, width = 10, text = "Space", font = ("Arial", 25))
+        spaceLetter.grid(row = 1, column = 0)
+        spaceButton = tk.Button(Translator, text = "Okay", command = lambda:nextWord(space, spaceButton, ctr, wrdlist))
+        spaceButton.grid(row = 2, column = 0)
+        Translator.pack()
+
+    def triceratops(x, ctr, wrdlist, Translator):
+        def nextWord(Letter, letterButton, ctr, wrdlist):
+            Letter.destroy()
+            letterButton.destroy()
+            ctr += 1
+            if (ctr <= len(wrdlist)):
+                stegosaurus(ctr, wrdlist, Translator, textLetter)
+            else:
+                Translator.destroy()
+        img = [tk.PhotoImage(file=rf"C:TRUE_Sign_Library/Short/{x}.gif")]
+        Letter = tk.Label(Translator, height=400, width=500, image=img)
+        Letter.grid(row=0,column=0)
+        textLetter = tk.Label(Translator, height=5, width=10, text=f"{x}", font=("Arial", 25))
+        textLetter.grid(row=1, column=0)
+        letterButton = tk.Button(Translator, text = "Okay", command=lambda:nextWord(Letter, letterButton, ctr, wrdlist))
+        letterButton.grid(row=2,column=0)
+        Translator.pack()
+
+    def pteradactyl(x, ctr, wrdlist, Translator): # finger spelling function
+        def nextLetter(x, i, Letter, letterButton, ctr, wrdlist, textLetter):
+            Letter.destroy() # Removes previous letter
+            letterButton.destroy() # Replaces button to remove letter with a new one
+            if i != len(li)-1:
+                i+=1
+                img = tk.PhotoImage(file=rf"C:TRUE_Sign_Library/Finger/{li[i]}.png")
+                Letter = tk.Label(Translator, height=400, width=500, image=img)
+                Letter.grid(row=0,column=0)# displays specific later
+                Letter.grid(row=0,column=0)
+                textLetter = tk.Label(Translator, height=5, width=10, text=f"{li[i]}",font=("Arial", 25))
+                textLetter.grid(row=1, column=0)
+                letterButton = tk.Button(Translator, text="Next Letter", command=lambda:nextLetter(x, i, Letter, letterButton, ctr, wrdlist, textLetter)) # next letter button
+                letterButton.grid(row=2,column=0)
+                Translator.pack()
+            ctr += 1
+            if (ctr <= len(wrdlist)):
+                stegosaurus(ctr, wrdlist, Translator, textLetter)
+            else:
+                Translator.destroy() # destroys the GUI when word is finished
+
+        i = 0
+        x = x.lower()
+        li = list(x) # takes the input from text box and turns it into a list
+        print(li[i]) # debugging, remove later
+        img = tk.PhotoImage(file=rf"C:TRUE_Sign_Library/Finger/{li[i]}.png")
+        Letter = tk.Label(Translator, height=400, width=500, image=img)
+        Letter.grid(row=0,column=0)
+        textLetter = tk.Label(Translator, height=5, width=10, text=f"{li[i]}", font=("Arial", 25))
+        textLetter.grid(row=1, column=0)
+        letterButton = tk.Button(Translator, text = "Next Letter", command=lambda:nextLetter(x, i, Letter, letterButton, ctr, wrdlist, textLetter))
+        letterButton.grid(row=2,column=0)
+        Translator.pack()
+    Translator = tk.Toplevel()
+    batchBoolean = batchesSearch(batches, wrdlist[ctr])
+    if (batchBoolean == False):
+        for i in translated:
+            if translated[i] == wrdlist[1]:
+                pass
+            else:
+                translated.append(wrdlist[1])
+        pteradactyl(wrdlist[ctr], ctr, wrdlist, Translator) # uses the input to finger spell
+    else:
+        triceratops(wrdlist[ctr], ctr, wrdlist, Translator)
+
+##############################################################################################################################
+
 def mainScreen():
 
     def getInput(): # Function to recieve the input via text box
+
+###############################################################################################################################
+
+        text = entry.get()
+        print("Input: ", text)
+        wrdlist = multWords(text)
+        ctr = 1
+        dinosaurs(ctr, wrdlist)
+
+################################################################################################################################
+
         inList = False
         text = entry.get()
         print("Input: ", text)
