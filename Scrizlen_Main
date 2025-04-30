@@ -2,6 +2,7 @@ import tkinter as tk
 from time import sleep
 from random import *
 from Sign_Library_Code import *
+from PIL import Image
 
 sLi = False
 saved = [] # list for saved objects
@@ -10,7 +11,15 @@ translated = [] # used to keep track of all translated words in order to test kn
 mastery = [] # used to keep track of mastery progress for each translated term
 learned = [] # used to keep track of all mastered terms
 
+
 def testKnowledge():
+    def animation(current_frame=0):
+        image = photoimage_objects[current_frame]
+        Word.configure(image=image)
+        current_frame = current_frame + 1
+        if current_frame == frames:
+            current_frame = 0
+        Word.after(50, lambda: animation(current_frame))
     def checkMastery(x):
         m = 0
         Tester.destroy() # destroys the GUI when word is finished
@@ -86,16 +95,24 @@ def testKnowledge():
         if is100 == True:
             Tester = tk.Toplevel() #sets up a separate GUI for spelling
             Tester.title("Test Your Knowledge!")
-            img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{term}.gif")
-            Letter = tk.Label(Tester, height=400, width=500, image=img)
-            Letter.grid(row=0,column=0)
+            Word = tk.Label(Tester, image="")
+            Word.pack()
+
+            file = rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{term.lower()}.gif"
+            info = Image.open(file)
+            frames = info.n_frames  # number of frames
+            photoimage_objects = []
+            for i in range(frames):
+                obj = tk.PhotoImage(file=file, format=f"gif -index {i}")
+                photoimage_objects.append(obj)
+        
+            animation()
             textLetter = tk.Label(Tester, height=5, width=15, text=f"What term is this?", font=("Arial", 25))
-            textLetter.grid(row=1, column=0)
+            textLetter.pack()
             testBox = tk.Entry(Tester, width=30)
-            testBox.grid(row=2, column=0)
+            testBox.pack()
             letterButton = tk.Button(Tester, text = "Check", command=lambda:testWord(term, testBox.get()))
-            letterButton.grid(row=2,column=1)
-            Tester.pack()
+            letterButton.pack()
         else:
             i = 0
             li = list(term) # takes the input from text box and turns it into a list
@@ -140,15 +157,31 @@ def pteradactyl(x): # finger spelling function
 
     is100 = knownWord(batches, x)
     if is100 == True:
+        images = []
         Translator = tk.Toplevel() #sets up a separate GUI for spelling
-        img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{x.lower()}.gif")
-        Word = tk.Label(Translator, height=400, width=500, image=img)
-        Word.grid(row=0,column=0)
+        Word = tk.Label(Translator, image="")
+        Word.pack()
+
+        file = rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{x.lower()}.gif"
+        info = Image.open(file)
+        frames = info.n_frames  # number of frames
+        photoimage_objects = []
+        for i in range(frames):
+            obj = tk.PhotoImage(file=file, format=f"gif -index {i}")
+            photoimage_objects.append(obj)
+        def animation(current_frame=0):
+            image = photoimage_objects[current_frame]
+            Word.configure(image=image)
+            current_frame = current_frame + 1
+            if current_frame == frames:
+                current_frame = 0
+            Word.after(50, lambda: animation(current_frame))
+        animation()
+
         textWord = tk.Label(Translator, height=5, width=10, text=f"{x}", font=("Arial", 25))
-        textWord.grid(row=1, column=0)
+        textWord.pack()
         wordButton = tk.Button(Translator, text = "Next", command=lambda:(Translator.destroy(), testKnowledge()))
-        wordButton.grid(row=2,column=0)
-        Translator.pack()
+        wordButton.pack()
     else:
         li = list(x) # takes the input from text box and turns it into a list
         for l in range(0,len(li)):
