@@ -1,0 +1,537 @@
+[
+  {
+    "word": "again",
+    "media": "/assets/gifs/again.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "alive",
+    "media": "/assets/gifs/alive.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "also",
+    "media": "/assets/gifs/also.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "ask",
+    "media": "/assets/gifs/ask.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "bad",
+    "media": "/assets/gifs/bad.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "boy",
+    "media": "/assets/gifs/boy.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "but",
+    "media": "/assets/gifs/but.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "can",
+    "media": "/assets/gifs/can.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "come",
+    "media": "/assets/gifs/come.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "deaf",
+    "media": "/assets/gifs/deaf.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "different",
+    "media": "/assets/gifs/different.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "drink",
+    "media": "/assets/gifs/drink.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "drive",
+    "media": "/assets/gifs/drive.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "eat",
+    "media": "/assets/gifs/eat.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "email",
+    "media": "/assets/gifs/email.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "excuse",
+    "media": "/assets/gifs/excuse.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "family",
+    "media": "/assets/gifs/family.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "feel",
+    "media": "/assets/gifs/feel.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "few",
+    "media": "/assets/gifs/few.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "find",
+    "media": "/assets/gifs/find.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "fine",
+    "media": "/assets/gifs/fine.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "fingerspelling dactycology",
+    "media": "/assets/gifs/fingerspelling dactycology.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "fingerspelling",
+    "media": "/assets/gifs/fingerspelling.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "finish",
+    "media": "/assets/gifs/finish.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "food",
+    "media": "/assets/gifs/food.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "for",
+    "media": "/assets/gifs/for.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "forget",
+    "media": "/assets/gifs/forget.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "friend",
+    "media": "/assets/gifs/friend.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "get",
+    "media": "/assets/gifs/get.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "girl",
+    "media": "/assets/gifs/girl.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "give",
+    "media": "/assets/gifs/give.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "go",
+    "media": "/assets/gifs/go.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "good",
+    "media": "/assets/gifs/good.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "have",
+    "media": "/assets/gifs/have.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "he",
+    "media": "/assets/gifs/he.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "hearing",
+    "media": "/assets/gifs/hearing.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "hello",
+    "media": "/assets/gifs/hello.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "help",
+    "media": "/assets/gifs/help.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "home",
+    "media": "/assets/gifs/home.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "how",
+    "media": "/assets/gifs/how.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "internet",
+    "media": "/assets/gifs/internet.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "know",
+    "media": "/assets/gifs/know.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "later",
+    "media": "/assets/gifs/later.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "like",
+    "media": "/assets/gifs/like.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "little",
+    "media": "/assets/gifs/little.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "live",
+    "media": "/assets/gifs/live.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "man",
+    "media": "/assets/gifs/man.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "many",
+    "media": "/assets/gifs/many.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "me",
+    "media": "/assets/gifs/me.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "meet",
+    "media": "/assets/gifs/meet.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "more",
+    "media": "/assets/gifs/more.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "my",
+    "media": "/assets/gifs/my.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "name",
+    "media": "/assets/gifs/name.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "new",
+    "media": "/assets/gifs/new.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "no",
+    "media": "/assets/gifs/no.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "not",
+    "media": "/assets/gifs/not.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "now",
+    "media": "/assets/gifs/now.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "ok",
+    "media": "/assets/gifs/ok.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "okay",
+    "media": "/assets/gifs/okay.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "old",
+    "media": "/assets/gifs/old.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "other",
+    "media": "/assets/gifs/other.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "please",
+    "media": "/assets/gifs/please.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "remember",
+    "media": "/assets/gifs/remember.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "same",
+    "media": "/assets/gifs/same.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "say",
+    "media": "/assets/gifs/say.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "school",
+    "media": "/assets/gifs/school.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "see",
+    "media": "/assets/gifs/see.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "she",
+    "media": "/assets/gifs/she.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "should",
+    "media": "/assets/gifs/should.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "sign",
+    "media": "/assets/gifs/sign.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "signed word",
+    "media": "/assets/gifs/signed word.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "slow",
+    "media": "/assets/gifs/slow.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "sms",
+    "media": "/assets/gifs/sms.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "some",
+    "media": "/assets/gifs/some.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "sorry",
+    "media": "/assets/gifs/sorry.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "store",
+    "media": "/assets/gifs/store.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "take",
+    "media": "/assets/gifs/take.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "tell",
+    "media": "/assets/gifs/tell.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "texting",
+    "media": "/assets/gifs/texting.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "thank you",
+    "media": "/assets/gifs/thank you.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "thank",
+    "media": "/assets/gifs/thank.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "thanks",
+    "media": "/assets/gifs/thanks.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "their",
+    "media": "/assets/gifs/their.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "they",
+    "media": "/assets/gifs/they.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "think",
+    "media": "/assets/gifs/think.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "time",
+    "media": "/assets/gifs/time.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "tired",
+    "media": "/assets/gifs/tired.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "try",
+    "media": "/assets/gifs/try.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "understand",
+    "media": "/assets/gifs/understand.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "use",
+    "media": "/assets/gifs/use.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "utilize",
+    "media": "/assets/gifs/utilize.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "wait",
+    "media": "/assets/gifs/wait.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "want",
+    "media": "/assets/gifs/want.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "what",
+    "media": "/assets/gifs/what.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "when",
+    "media": "/assets/gifs/when.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "where",
+    "media": "/assets/gifs/where.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "which",
+    "media": "/assets/gifs/which.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "who",
+    "media": "/assets/gifs/who.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "why",
+    "media": "/assets/gifs/why.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "will",
+    "media": "/assets/gifs/will.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "with",
+    "media": "/assets/gifs/with.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "woman",
+    "media": "/assets/gifs/woman.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "work",
+    "media": "/assets/gifs/work.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "write",
+    "media": "/assets/gifs/write.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "yes",
+    "media": "/assets/gifs/yes.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "you",
+    "media": "/assets/gifs/you.gif",
+    "usesNonDominantHand": false
+  },
+  {
+    "word": "your",
+    "media": "/assets/gifs/your.gif",
+    "usesNonDominantHand": false
+  }
+]

@@ -1,0 +1,23 @@
+[
+    { "word": "hello",        "media": "/assets/gifs/hello.gif" },
+    { "word": "thank you",    "media": "/assets/gifs/thank_you.gif" },
+    { "word": "please",       "media": "/assets/gifs/please.gif" },
+    { "word": "sorry",        "media": "/assets/gifs/sorry.gif" },
+    { "word": "yes",          "media": "/assets/gifs/yes.gif" },
+    { "word": "no",           "media": "/assets/gifs/no.gif" },
+    { "word": "help",         "media": "/assets/gifs/help.gif" },
+    { "word": "stop",         "media": "/assets/gifs/stop.gif" },
+    { "word": "eat",          "media": "/assets/gifs/eat.gif" },
+    { "word": "drink",        "media": "/assets/gifs/drink.gif" },
+    { "word": "bathroom",     "media": "/assets/gifs/bathroom.gif" },
+    { "word": "where",        "media": "/assets/gifs/where.gif" },
+    { "word": "who",          "media": "/assets/gifs/who.gif" },
+    { "word": "what",         "media": "/assets/gifs/what.gif" },
+    { "word": "when",         "media": "/assets/gifs/when.gif" },
+    { "word": "why",          "media": "/assets/gifs/why.gif" },
+    { "word": "family",       "media": "/assets/gifs/family.gif" },
+    { "word": "friend",       "media": "/assets/gifs/friend.gif" },
+    { "word": "love",         "media": "/assets/gifs/love.gif" },
+    { "word": "good morning", "media": "/assets/gifs/good_morning.gif" }
+  ]
+  
