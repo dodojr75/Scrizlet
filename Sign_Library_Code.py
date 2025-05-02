@@ -22,15 +22,38 @@ batch1 = ['again','also','ask','bad','boy','but',
 
 batches = [batch1]
 
+def multWords(sent):
+    li1 = list(sent)
+    spaces = []
+    ctr = -1
+    ind = 0
+    for i in li1:
+        ctr += 1
+        if (i == ' '):
+            spaces.append(ctr)
+    spaces.append(len(li1))
+    wrdlist = createWrdList(li1, spaces, ind)
+    return wrdlist
 
-def batchesSearch(x, y):
-    y = y.lower()               # lower case so it can be easily verified
-    for i in x:                 # to cycle between current and future word lists
-        for g in i:             # each individual list (or batch in this case)
-            if (y == g):        # check if any words match the requested word
+def createWrdList(li1, spaces, ind):
+    wrdlist = {}
+    numcount = 1
+    for i in spaces:
+        wrd = []
+        while (ind < i):
+            wrd.append(li1[ind])
+            ind += 1
+        if (wrd[0] == ' '):
+            wrd.pop(0)
+        wrd = ''.join(wrd)
+        wrdlist[numcount] = wrd
+        numcount += 1
+    return wrdlist
+
+def batchesSearch(li, wrd):
+    wrd = wrd.lower()
+    for i in li:
+        for x in i:
+            if (wrd == x):
                 return True
     return False
-
-def knownWord(li,wrd):          # li will always be batches
-    batchBoo = batchesSearch(li,wrd)
-    return batchBoo
