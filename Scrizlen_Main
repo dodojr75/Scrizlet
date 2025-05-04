@@ -23,9 +23,9 @@ def testKnowledge():
     def checkMastery(x):
         m = 0
         Tester.destroy() # destroys the GUI when word is finished
+        Scrizlet.deiconify() # Bring back Scrizlet
         if len(mastery) == 0: # if the mastery list is empty
             mastery.append(x)
-            Scrizlet.deiconify() # Bring back Scrizlet
         else:
             for t in (0,len(mastery)-1): # go through the entire mastery list
                 if mastery[t] == x: # if the term is found
@@ -34,12 +34,11 @@ def testKnowledge():
                         Mastered = tk.Toplevel()
                         masteredLabel = tk.Label(Mastered, height=20, width=50, text=f"You have successfully mastered the term '{x}.'\nCongratulations!\n")
                         masteredLabel.grid(row=0,column=0)
-                        masteredButton = tk.Button(Mastered, text="Ok.", command=lambda:[Mastered.destroy(),Scrizlet.deiconify()])
+                        masteredButton = tk.Button(Mastered, text="Ok.", command=lambda:Mastered.destroy())
                         masteredButton.grid(row=1, column=0)
                         learned.append(x) # add the term to the learned list
                     else:
                         mastery.append(x) # append to mastery list
-                        Scrizlet.deiconify() # bring back Scrizlet
     def testWord(word, boxWord):
         if word == boxWord:
             notif = tk.Toplevel() # make a new window
@@ -91,7 +90,7 @@ def testKnowledge():
         Scrizlet.withdraw() # Take away Scrizlet
         tested = randint(0, len(translated)-1) # what term are we testing?
         term = translated[tested] 
-        is100 = knownWord(batches, term)
+        is100 = batchesSearch(batches, term)
         if is100 == True:
             Tester = tk.Toplevel() #sets up a separate GUI for spelling
             Tester.title("Test Your Knowledge!")
@@ -132,43 +131,35 @@ def testKnowledge():
             letterButton.grid(row=2,column=1)
             Tester.pack()
 
-def pteradactyl(x): # finger spelling function
-    def nextLetter(i, Letter, letterButton):
-        Letter.destroy() # Removes previous letter
-        letterButton.destroy() # Replaces button to remove letter with a new one
-        if i != len(li)-1:
-            i+=1
-            if li[i] == " ":
-                i+=1
-            img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Letters\letters{li[i]}.png")
-            Letter = tk.Label(Translator, height=400, width=500, image=img)
-            Letter.grid(row=0,column=0)# displays specific later
-            Letter.grid(row=0,column=0)
-            textLetter = tk.Label(Translator, height=5, width=10, text=f"{li[i]}",font=("Arial", 25))
-            textLetter.grid(row=1, column=0)
-            letterButton = tk.Button(Translator, text="Next Letter", command=lambda:nextLetter(i, Letter, letterButton)) # next letter button
-            letterButton.grid(row=2,column=0)
-            Translator.pack()
-        else:
-            Translator.destroy() # destroys the GUI when word is finished
-            testKnowledge()
 
-    i = 0
 
-    is100 = knownWord(batches, x)
-    if is100 == True:
-        images = []
-        Translator = tk.Toplevel() #sets up a separate GUI for spelling
-        Word = tk.Label(Translator, image="")
-        Word.pack()
+def dinosaurs(ctr, wrdlist):
+    
+    def stegosaurus(ctr, wrdlist, Translator, textLetter):
+        def nextWord(space, spaceButton, spaceLetter, ctr, wrdlist):
+            space.destroy()
+            spaceLetter.destroy()
+            spaceButton.destroy()
+            print(wrdlist[ctr])
+            if (ctr <= len(wrdlist)):
+                batchBoolean = batchesSearch(batches, wrdlist[ctr])
+                if (batchBoolean == False):
+                    pteradactyl(wrdlist[ctr], ctr, wrdlist, Translator)
+                else:
+                    triceratops(wrdlist[ctr], ctr, wrdlist, Translator)
+            else:
+                Translator.destroy()
+                testKnowledge()
+        textLetter.destroy()
+        space = tk.Label(Translator, text = "Now, take a breif pause", height = 5, width = 10, font = ("Ariel", 25))
+        space.grid(row = 0, column = 0)
+        spaceLetter = tk.Label(Translator, height = 5, width = 10, text = "Space", font = ("Arial", 25))
+        spaceLetter.grid(row = 1, column = 0)
+        spaceButton = tk.Button(Translator, text = "Okay", command = lambda:nextWord(space, spaceButton, spaceLetter, ctr, wrdlist))
+        spaceButton.grid(row = 2, column = 0)
+        Translator.pack()
 
-        file = rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{x.lower()}.gif"
-        info = Image.open(file)
-        frames = info.n_frames  # number of frames
-        photoimage_objects = []
-        for i in range(frames):
-            obj = tk.PhotoImage(file=file, format=f"gif -index {i}")
-            photoimage_objects.append(obj)
+    def triceratops(x, ctr, wrdlist, Translator):
         def animation(current_frame=0):
             image = photoimage_objects[current_frame]
             Word.configure(image=image)
@@ -176,54 +167,120 @@ def pteradactyl(x): # finger spelling function
             if current_frame == frames:
                 current_frame = 0
             Word.after(50, lambda: animation(current_frame))
-        animation()
+        def nextWord(Word, letterButton, ctr, wrdlist):
+            Word.destroy()
+            letterButton.destroy()
+            ctr += 1
+            if (ctr <= len(wrdlist)):
+                stegosaurus(ctr, wrdlist, Translator, textLetter)
+            else:
+                Translator.destroy()
+                testKnowledge()
 
-        textWord = tk.Label(Translator, height=5, width=10, text=f"{x}", font=("Arial", 25))
-        textWord.pack()
-        wordButton = tk.Button(Translator, text = "Next", command=lambda:(Translator.destroy(), testKnowledge()))
-        wordButton.pack()
-    else:
+        Word = tk.Label(Translator, image="")
+        Word.grid(row=0,column=0)
+        file = rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Words\{x.lower()}.gif"
+        info = Image.open(file)
+        frames = info.n_frames  # number of frames
+        photoimage_objects = []
+        for i in range(frames):
+             obj = tk.PhotoImage(file=file, format=f"gif -index {i}")
+             photoimage_objects.append(obj)
+        
+        animation()
+        textLetter = tk.Label(Translator, height=5, width=10, text=f"{x}", font=("Arial", 25))
+        textLetter.grid(row=1,column=0)
+        letterButton = tk.Button(Translator, text = "Okay", command=lambda:nextWord(Word, letterButton, ctr, wrdlist))
+        letterButton.grid(row=2,column=0)
+
+    def pteradactyl(x, ctr, wrdlist, Translator): # finger spelling function
+        def nextLetter(x, i, Letter, letterButton, ctr, wrdlist, textLetter):
+            Letter.destroy() # Removes previous letter
+            letterButton.destroy() # Replaces button to remove letter with a new one
+            if i != len(li)-1:
+                i+=1
+                img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Letters\letters{li[i].upper()}.png")
+                Letter = tk.Label(Translator, height=400, width=500, image=img)
+                Letter.grid(row=0,column=0)# displays specific later
+                Letter.grid(row=0,column=0)
+                textLetter = tk.Label(Translator, height=5, width=10, text=f"{li[i]}",font=("Arial", 25))
+                textLetter.grid(row=1, column=0)
+                letterButton = tk.Button(Translator, text="Next Letter", command=lambda:nextLetter(x, i, Letter, letterButton, ctr, wrdlist, textLetter)) # next letter button
+                letterButton.grid(row=2,column=0)
+                Translator.pack()
+            ctr += 1
+            if (ctr <= len(wrdlist)):
+                stegosaurus(ctr, wrdlist, Translator, textLetter)
+            else:
+                Translator.destroy() # destroys the GUI when word is finished
+                testKnowledge()
+
+        i = 0
+        x = x.lower()
         li = list(x) # takes the input from text box and turns it into a list
-        for l in range(0,len(li)):
-            li[l] = li[l].upper()
-        print(li) # debugging, remove later
-        Translator = tk.Toplevel() #sets up a separate GUI for spelling
-        img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Letters\letters{li[i]}.png")
+        print(li[i]) # debugging, remove later
+        img = tk.PhotoImage(file=rf"C:\Users\spych\OneDrive\Desktop\CSC-132\Letters\letters{li[i].upper()}.png")
         Letter = tk.Label(Translator, height=400, width=500, image=img)
         Letter.grid(row=0,column=0)
         textLetter = tk.Label(Translator, height=5, width=10, text=f"{li[i]}", font=("Arial", 25))
         textLetter.grid(row=1, column=0)
-        letterButton = tk.Button(Translator, text = "Next Letter", command=lambda:nextLetter(i, Letter, letterButton))
+        letterButton = tk.Button(Translator, text = "Next Letter", command=lambda:nextLetter(x, i, Letter, letterButton, ctr, wrdlist, textLetter))
         letterButton.grid(row=2,column=0)
         Translator.pack()
+    Translator = tk.Toplevel()
+    batchBoolean = batchesSearch(batches, wrdlist[ctr])
+    if (batchBoolean == False):
+        pteradactyl(wrdlist[ctr], ctr, wrdlist, Translator) # uses the input to finger spell
+    else:
+        triceratops(wrdlist[ctr], ctr, wrdlist, Translator)
 
 def mainScreen():
 
     def getInput(): # Function to recieve the input via text box
-        inList = False
         text = entry.get()
         print("Input: ", text)
+        wrdlist = multWords(text)
+        ctr = 1
+        inList = False
+        print("Input: ", text)
         if len(translated) == 0:
-            translated.append(text)
+            if len(wrdlist) == 1:
+                translated.append(wrdlist[1])
+            else:
+                translated.append(wrdlist[1])
+                for w in (2, len(wrdlist)):
+                    word = wrdlist[w]
+                    for i in (0, len(translated)-1):
+                        if word == translated[i]:
+                            inList = True
+                    if inList == True:
+                        pass
+                    else:
+                        translated.append(word)
+                    inList = False
+                       
         else:
-            for i in (0, len(translated)-1):
-                if translated[i] == text:
-                    inList = True
-            if len(learned)==0:
-                pass
-            else:
-                for i in (0, len(learned)-1):
-                    if learned[i] == text:
+           for w in (1, len(wrdlist)):
+                word = wrdlist[w]
+                for i in (0, len(translated)-1):
+                    if word == translated[i]:
                         inList = True
-            if inList == True:
-                pass
-            else:
-                translated.append(text)
+                if len(learned) == 0:
+                    pass
+                else:
+                    for l in (0, len(learned)-1):
+                        if word == learned[l]:
+                           inList = True
+                if inList == True:
+                    pass
+                else:
+                    translated.append(word)
+                inList = False
         print(translated)
-        pteradactyl(text) # uses the input to finger spell
-   
+        dinosaurs(ctr, wrdlist)
 
     def save():
+
         global saves # calls the global "saves"
         text = entry.get() # Uses text box input
         if len(saved) != 5: 
@@ -241,9 +298,13 @@ def mainScreen():
     def savedList():
         global sLi 
         sLi = True # Used to automatically update the list every time you save something new.
+        def saveButton(text):
+            wrdlist = multWords(text)
+            ctr = 1
+            dinosaurs(ctr, wrdlist)
 
         if len(saved)==0: #If you have nothing saved...
-            notif = tk.Toplayer()
+            notif = tk.Toplevel()
             notifLabel = tk.Label(notif, text="You do not have any saved terms!", font=("Arial",25))
             notifLabel.grid(row=0, column=0)
             notifButton = tk.Button(notif, text="Ok.", command=notif.destroy)
@@ -255,58 +316,58 @@ def mainScreen():
             Memory.grid(row=1, column=2)
 
         if len(saved)==1: # Creates a button for each saved object if the length of the saved items is 1
-            button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+            button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
             button1.grid(row=0, column=0)
         elif len(saved)==2: # Creates a button for each saved object if the length of the saved items is 2
             try: # Destroys buttons and creates new ones to prevent doubling up.
                 button1.destroy()
-                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
                 button1.grid(row=0, column=0)
-                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(pteradactyl(button2.cget("text"))))
+                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(saveButton(button2.cget("text"))))
                 button2.grid(row=1, column=0)
             except: # if no double ups, create buttons
-                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
                 button1.grid(row=0, column=0)
-                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(pteradactyl(button2.cget("text"))))
+                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(saveButton(button2.cget("text"))))
                 button2.grid(row=1, column=0)
         elif len(saved)==3: # Creates a button for each saved object if the length of the saved items is 3
             try: # Destroys buttons and creates new ones to prevent doubling up
                 button1.destroy()
                 button2.destroy()
-                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
                 button1.grid(row=0, column=0)
-                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(pteradactyl(button2.cget("text"))))
+                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(saveButton(button2.cget("text"))))
                 button2.grid(row=1, column=0)
-                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(pteradactyl(button3.cget("text"))))
+                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(saveButton(button3.cget("text"))))
                 button3.grid(row=2, column=0)
             except: # If no double ups, create buttons
-                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
                 button1.grid(row=0, column=0)
-                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(pteradactyl(button2.cget("text"))))
+                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(saveButton(button2.cget("text"))))
                 button2.grid(row=1, column=0)
-                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(pteradactyl(button3.cget("text"))))
+                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(saveButton(button3.cget("text"))))
                 button3.grid(row=2, column=0)
         elif len(saved)==4: # Creates a button for each saved object if the length of the saved items is 4
             try: # Destroys buttons and creates new ones to avoid doubling up
                 button1.destroy()
                 button2.destroy()
                 button3.destroy()
-                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
                 button1.grid(row=0, column=0)
-                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(pteradactyl(button2.cget("text"))))
+                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(saveButton(button2.cget("text"))))
                 button2.grid(row=1, column=0)
-                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(pteradactyl(button3.cget("text"))))
+                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(saveButton(button3.cget("text"))))
                 button3.grid(row=2, column=0)
-                button4 = tk.Button(Scrizlet, text=saved[3], command=lambda:(pteradactyl(button4.cget("text"))))
+                button4 = tk.Button(Scrizlet, text=saved[3], command=lambda:(saveButton(button4.cget("text"))))
                 button4.grid(row=3, column=0)
             except: # If no double ups, create buttons
-                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
                 button1.grid(row=0, column=0)
-                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(pteradactyl(button2.cget("text"))))
+                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(saveButton(button2.cget("text"))))
                 button2.grid(row=1, column=0)
-                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(pteradactyl(button3.cget("text"))))
+                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(saveButton(button3.cget("text"))))
                 button3.grid(row=2, column=0)
-                button4 = tk.Button(Scrizlet, text=saved[3], command=lambda:(pteradactyl(button4.cget("text"))))
+                button4 = tk.Button(Scrizlet, text=saved[3], command=lambda:(saveButton(button4.cget("text"))))
                 button4.grid(row=3, column=0)
         elif len(saved)==5: # Creates a button for each saved object if the length of the saved items is 5
             try: # Destroys buttons and creates new ones to prevent doubling up
@@ -314,26 +375,26 @@ def mainScreen():
                 button2.destroy()
                 button3.destroy()
                 button4.destroy()
-                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
                 button1.grid(row=0, column=0)
-                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(pteradactyl(button2.cget("text"))))
+                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(saveButton(button2.cget("text"))))
                 button2.grid(row=1, column=0)
-                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(pteradactyl(button3.cget("text"))))
+                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(saveButton(button3.cget("text"))))
                 button3.grid(row=2, column=0)
-                button4 = tk.Button(Scrizlet, text=saved[3], command=lambda:(pteradactyl(button4.cget("text"))))
+                button4 = tk.Button(Scrizlet, text=saved[3], command=lambda:(saveButton(button4.cget("text"))))
                 button4.grid(row=3, column=0)
-                button5 = tk.Button(Scrizlet, text=saved[4], command=lambda:(pteradactyl(button5.cget("text"))))
+                button5 = tk.Button(Scrizlet, text=saved[4], command=lambda:(saveButton(button5.cget("text"))))
                 button5.grid(row=4, column=0)
             except: # If no double ups, create new buttons
-                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(pteradactyl(button1.cget("text"))))
+                button1 = tk.Button(Scrizlet, text=saved[0], command=lambda:(saveButton(button1.cget("text"))))
                 button1.grid(row=0, column=0)
-                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(pteradactyl(button2.cget("text"))))
+                button2 = tk.Button(Scrizlet, text=saved[1], command=lambda:(saveButton(button2.cget("text"))))
                 button2.grid(row=1, column=0)
-                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(pteradactyl(button3.cget("text"))))
+                button3 = tk.Button(Scrizlet, text=saved[2], command=lambda:(saveButton(button3.cget("text"))))
                 button3.grid(row=2, column=0)
-                button4 = tk.Button(Scrizlet, text=saved[3], command=lambda:(pteradactyl(button4.cget("text"))))
+                button4 = tk.Button(Scrizlet, text=saved[3], command=lambda:(saveButton(button4.cget("text"))))
                 button4.grid(row=3, column=0)
-                button5 = tk.Button(Scrizlet, text=saved[4], command=lambda:(pteradactyl(button5.cget("text"))))
+                button5 = tk.Button(Scrizlet, text=saved[4], command=lambda:(saveButton(button5.cget("text"))))
                 button5.grid(row=4, column=0)
 
     entry = tk.Entry(Scrizlet, width=30) # sets up the text box
