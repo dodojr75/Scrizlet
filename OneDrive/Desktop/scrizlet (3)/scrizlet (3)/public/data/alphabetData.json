@@ -1,0 +1,158 @@
+[
+  {
+    "id": "letter_A",
+    "letter": "A",
+    "image": "/assets/alphabets/A.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_B",
+    "letter": "B",
+    "image": "/assets/alphabets/B.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_C",
+    "letter": "C",
+    "image": "/assets/alphabets/C.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_D",
+    "letter": "D",
+    "image": "/assets/alphabets/D.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_E",
+    "letter": "E",
+    "image": "/assets/alphabets/E.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_F",
+    "letter": "F",
+    "image": "/assets/alphabets/F.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_G",
+    "letter": "G",
+    "image": "/assets/alphabets/G.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_H",
+    "letter": "H",
+    "image": "/assets/alphabets/H.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_I",
+    "letter": "I",
+    "image": "/assets/alphabets/I.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_J",
+    "letter": "J",
+    "image": "/assets/alphabets/J.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_K",
+    "letter": "K",
+    "image": "/assets/alphabets/K.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_L",
+    "letter": "L",
+    "image": "/assets/alphabets/L.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_M",
+    "letter": "M",
+    "image": "/assets/alphabets/M.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_N",
+    "letter": "N",
+    "image": "/assets/alphabets/N.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_O",
+    "letter": "O",
+    "image": "/assets/alphabets/O.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_P",
+    "letter": "P",
+    "image": "/assets/alphabets/P.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_Q",
+    "letter": "Q",
+    "image": "/assets/alphabets/Q.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_R",
+    "letter": "R",
+    "image": "/assets/alphabets/R.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_S",
+    "letter": "S",
+    "image": "/assets/alphabets/S.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_T",
+    "letter": "T",
+    "image": "/assets/alphabets/T.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_U",
+    "letter": "U",
+    "image": "/assets/alphabets/U.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_V",
+    "letter": "V",
+    "image": "/assets/alphabets/V.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_W",
+    "letter": "W",
+    "image": "/assets/alphabets/W.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_X",
+    "letter": "X",
+    "image": "/assets/alphabets/X.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_Y",
+    "letter": "Y",
+    "image": "/assets/alphabets/Y.png",
+    "type": "letter"
+  },
+  {
+    "id": "letter_Z",
+    "letter": "Z",
+    "image": "/assets/alphabets/Z.png",
+    "type": "letter"
+  }
+]

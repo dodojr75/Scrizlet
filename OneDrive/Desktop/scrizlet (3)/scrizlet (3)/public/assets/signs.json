@@ -1,0 +1,667 @@
+[
+  {
+    "word": "lettersa",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersA.png"
+  },
+  {
+    "word": "lettersb",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersB.png"
+  },
+  {
+    "word": "lettersc",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersC.png"
+  },
+  {
+    "word": "lettersd",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersD.png"
+  },
+  {
+    "word": "letterse",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersE.png"
+  },
+  {
+    "word": "lettersf",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersF.png"
+  },
+  {
+    "word": "lettersg",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersG.png"
+  },
+  {
+    "word": "lettersh",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersH.png"
+  },
+  {
+    "word": "lettersi",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersI.png"
+  },
+  {
+    "word": "lettersj",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersJ.png"
+  },
+  {
+    "word": "lettersk",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersK.png"
+  },
+  {
+    "word": "lettersl",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersL.png"
+  },
+  {
+    "word": "lettersm",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersM.png"
+  },
+  {
+    "word": "lettersn",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersN.png"
+  },
+  {
+    "word": "letterso",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersO.png"
+  },
+  {
+    "word": "lettersp",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersP.png"
+  },
+  {
+    "word": "lettersq",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersQ.png"
+  },
+  {
+    "word": "lettersr",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersR.png"
+  },
+  {
+    "word": "letterss",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersS.png"
+  },
+  {
+    "word": "letterst",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersT.png"
+  },
+  {
+    "word": "lettersu",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersU.png"
+  },
+  {
+    "word": "lettersv",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersV.png"
+  },
+  {
+    "word": "lettersw",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersW.png"
+  },
+  {
+    "word": "lettersx",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersX.png"
+  },
+  {
+    "word": "lettersy",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersY.png"
+  },
+  {
+    "word": "lettersz",
+    "type": "png",
+    "path": "/assets/assests/alphabets/lettersZ.png"
+  },
+  {
+    "word": "again",
+    "type": "gif",
+    "path": "/assets/assests/gifs/again.gif"
+  },
+  {
+    "word": "alive",
+    "type": "gif",
+    "path": "/assets/assests/gifs/alive.gif"
+  },
+  {
+    "word": "also",
+    "type": "gif",
+    "path": "/assets/assests/gifs/also.gif"
+  },
+  {
+    "word": "ask",
+    "type": "gif",
+    "path": "/assets/assests/gifs/ask.gif"
+  },
+  {
+    "word": "bad",
+    "type": "gif",
+    "path": "/assets/assests/gifs/bad.gif"
+  },
+  {
+    "word": "boy",
+    "type": "gif",
+    "path": "/assets/assests/gifs/boy.gif"
+  },
+  {
+    "word": "but",
+    "type": "gif",
+    "path": "/assets/assests/gifs/but.gif"
+  },
+  {
+    "word": "can",
+    "type": "gif",
+    "path": "/assets/assests/gifs/can.gif"
+  },
+  {
+    "word": "come",
+    "type": "gif",
+    "path": "/assets/assests/gifs/come.gif"
+  },
+  {
+    "word": "deaf",
+    "type": "gif",
+    "path": "/assets/assests/gifs/deaf.gif"
+  },
+  {
+    "word": "different",
+    "type": "gif",
+    "path": "/assets/assests/gifs/different.gif"
+  },
+  {
+    "word": "drink",
+    "type": "gif",
+    "path": "/assets/assests/gifs/drink.gif"
+  },
+  {
+    "word": "drive",
+    "type": "gif",
+    "path": "/assets/assests/gifs/drive.gif"
+  },
+  {
+    "word": "eat",
+    "type": "gif",
+    "path": "/assets/assests/gifs/eat.gif"
+  },
+  {
+    "word": "email",
+    "type": "gif",
+    "path": "/assets/assests/gifs/email.gif"
+  },
+  {
+    "word": "excuse",
+    "type": "gif",
+    "path": "/assets/assests/gifs/excuse.gif"
+  },
+  {
+    "word": "family",
+    "type": "gif",
+    "path": "/assets/assests/gifs/family.gif"
+  },
+  {
+    "word": "feel",
+    "type": "gif",
+    "path": "/assets/assests/gifs/feel.gif"
+  },
+  {
+    "word": "few",
+    "type": "gif",
+    "path": "/assets/assests/gifs/few.gif"
+  },
+  {
+    "word": "find",
+    "type": "gif",
+    "path": "/assets/assests/gifs/find.gif"
+  },
+  {
+    "word": "fine",
+    "type": "gif",
+    "path": "/assets/assests/gifs/fine.gif"
+  },
+  {
+    "word": "fingerspelling dactycology",
+    "type": "gif",
+    "path": "/assets/assests/gifs/fingerspelling dactycology.gif"
+  },
+  {
+    "word": "fingerspelling",
+    "type": "gif",
+    "path": "/assets/assests/gifs/fingerspelling.gif"
+  },
+  {
+    "word": "finish",
+    "type": "gif",
+    "path": "/assets/assests/gifs/finish.gif"
+  },
+  {
+    "word": "food",
+    "type": "gif",
+    "path": "/assets/assests/gifs/food.gif"
+  },
+  {
+    "word": "for",
+    "type": "gif",
+    "path": "/assets/assests/gifs/for.gif"
+  },
+  {
+    "word": "forget",
+    "type": "gif",
+    "path": "/assets/assests/gifs/forget.gif"
+  },
+  {
+    "word": "friend",
+    "type": "gif",
+    "path": "/assets/assests/gifs/friend.gif"
+  },
+  {
+    "word": "get",
+    "type": "gif",
+    "path": "/assets/assests/gifs/get.gif"
+  },
+  {
+    "word": "girl",
+    "type": "gif",
+    "path": "/assets/assests/gifs/girl.gif"
+  },
+  {
+    "word": "give",
+    "type": "gif",
+    "path": "/assets/assests/gifs/give.gif"
+  },
+  {
+    "word": "go",
+    "type": "gif",
+    "path": "/assets/assests/gifs/go.gif"
+  },
+  {
+    "word": "good",
+    "type": "gif",
+    "path": "/assets/assests/gifs/good.gif"
+  },
+  {
+    "word": "have",
+    "type": "gif",
+    "path": "/assets/assests/gifs/have.gif"
+  },
+  {
+    "word": "he",
+    "type": "gif",
+    "path": "/assets/assests/gifs/he.gif"
+  },
+  {
+    "word": "hearing",
+    "type": "gif",
+    "path": "/assets/assests/gifs/hearing.gif"
+  },
+  {
+    "word": "hello",
+    "type": "gif",
+    "path": "/assets/assests/gifs/hello.gif"
+  },
+  {
+    "word": "help",
+    "type": "gif",
+    "path": "/assets/assests/gifs/help.gif"
+  },
+  {
+    "word": "home",
+    "type": "gif",
+    "path": "/assets/assests/gifs/home.gif"
+  },
+  {
+    "word": "how",
+    "type": "gif",
+    "path": "/assets/assests/gifs/how.gif"
+  },
+  {
+    "word": "internet",
+    "type": "gif",
+    "path": "/assets/assests/gifs/internet.gif"
+  },
+  {
+    "word": "know",
+    "type": "gif",
+    "path": "/assets/assests/gifs/know.gif"
+  },
+  {
+    "word": "later",
+    "type": "gif",
+    "path": "/assets/assests/gifs/later.gif"
+  },
+  {
+    "word": "like",
+    "type": "gif",
+    "path": "/assets/assests/gifs/like.gif"
+  },
+  {
+    "word": "little",
+    "type": "gif",
+    "path": "/assets/assests/gifs/little.gif"
+  },
+  {
+    "word": "live",
+    "type": "gif",
+    "path": "/assets/assests/gifs/live.gif"
+  },
+  {
+    "word": "man",
+    "type": "gif",
+    "path": "/assets/assests/gifs/man.gif"
+  },
+  {
+    "word": "many",
+    "type": "gif",
+    "path": "/assets/assests/gifs/many.gif"
+  },
+  {
+    "word": "me",
+    "type": "gif",
+    "path": "/assets/assests/gifs/me.gif"
+  },
+  {
+    "word": "meet",
+    "type": "gif",
+    "path": "/assets/assests/gifs/meet.gif"
+  },
+  {
+    "word": "more",
+    "type": "gif",
+    "path": "/assets/assests/gifs/more.gif"
+  },
+  {
+    "word": "my",
+    "type": "gif",
+    "path": "/assets/assests/gifs/my.gif"
+  },
+  {
+    "word": "name",
+    "type": "gif",
+    "path": "/assets/assests/gifs/name.gif"
+  },
+  {
+    "word": "new",
+    "type": "gif",
+    "path": "/assets/assests/gifs/new.gif"
+  },
+  {
+    "word": "no",
+    "type": "gif",
+    "path": "/assets/assests/gifs/no.gif"
+  },
+  {
+    "word": "not",
+    "type": "gif",
+    "path": "/assets/assests/gifs/not.gif"
+  },
+  {
+    "word": "now",
+    "type": "gif",
+    "path": "/assets/assests/gifs/now.gif"
+  },
+  {
+    "word": "ok",
+    "type": "gif",
+    "path": "/assets/assests/gifs/ok.gif"
+  },
+  {
+    "word": "okay",
+    "type": "gif",
+    "path": "/assets/assests/gifs/okay.gif"
+  },
+  {
+    "word": "old",
+    "type": "gif",
+    "path": "/assets/assests/gifs/old.gif"
+  },
+  {
+    "word": "other",
+    "type": "gif",
+    "path": "/assets/assests/gifs/other.gif"
+  },
+  {
+    "word": "please",
+    "type": "gif",
+    "path": "/assets/assests/gifs/please.gif"
+  },
+  {
+    "word": "remember",
+    "type": "gif",
+    "path": "/assets/assests/gifs/remember.gif"
+  },
+  {
+    "word": "same",
+    "type": "gif",
+    "path": "/assets/assests/gifs/same.gif"
+  },
+  {
+    "word": "say",
+    "type": "gif",
+    "path": "/assets/assests/gifs/say.gif"
+  },
+  {
+    "word": "school",
+    "type": "gif",
+    "path": "/assets/assests/gifs/school.gif"
+  },
+  {
+    "word": "see",
+    "type": "gif",
+    "path": "/assets/assests/gifs/see.gif"
+  },
+  {
+    "word": "she",
+    "type": "gif",
+    "path": "/assets/assests/gifs/she.gif"
+  },
+  {
+    "word": "should",
+    "type": "gif",
+    "path": "/assets/assests/gifs/should.gif"
+  },
+  {
+    "word": "sign",
+    "type": "gif",
+    "path": "/assets/assests/gifs/sign.gif"
+  },
+  {
+    "word": "signed word",
+    "type": "gif",
+    "path": "/assets/assests/gifs/signed word.gif"
+  },
+  {
+    "word": "slow",
+    "type": "gif",
+    "path": "/assets/assests/gifs/slow.gif"
+  },
+  {
+    "word": "sms",
+    "type": "gif",
+    "path": "/assets/assests/gifs/sms.gif"
+  },
+  {
+    "word": "some",
+    "type": "gif",
+    "path": "/assets/assests/gifs/some.gif"
+  },
+  {
+    "word": "sorry",
+    "type": "gif",
+    "path": "/assets/assests/gifs/sorry.gif"
+  },
+  {
+    "word": "store",
+    "type": "gif",
+    "path": "/assets/assests/gifs/store.gif"
+  },
+  {
+    "word": "take",
+    "type": "gif",
+    "path": "/assets/assests/gifs/take.gif"
+  },
+  {
+    "word": "tell",
+    "type": "gif",
+    "path": "/assets/assests/gifs/tell.gif"
+  },
+  {
+    "word": "texting",
+    "type": "gif",
+    "path": "/assets/assests/gifs/texting.gif"
+  },
+  {
+    "word": "thank you",
+    "type": "gif",
+    "path": "/assets/assests/gifs/thank you.gif"
+  },
+  {
+    "word": "thank",
+    "type": "gif",
+    "path": "/assets/assests/gifs/thank.gif"
+  },
+  {
+    "word": "thanks",
+    "type": "gif",
+    "path": "/assets/assests/gifs/thanks.gif"
+  },
+  {
+    "word": "their",
+    "type": "gif",
+    "path": "/assets/assests/gifs/their.gif"
+  },
+  {
+    "word": "they",
+    "type": "gif",
+    "path": "/assets/assests/gifs/they.gif"
+  },
+  {
+    "word": "think",
+    "type": "gif",
+    "path": "/assets/assests/gifs/think.gif"
+  },
+  {
+    "word": "time",
+    "type": "gif",
+    "path": "/assets/assests/gifs/time.gif"
+  },
+  {
+    "word": "tired",
+    "type": "gif",
+    "path": "/assets/assests/gifs/tired.gif"
+  },
+  {
+    "word": "try",
+    "type": "gif",
+    "path": "/assets/assests/gifs/try.gif"
+  },
+  {
+    "word": "understand",
+    "type": "gif",
+    "path": "/assets/assests/gifs/understand.gif"
+  },
+  {
+    "word": "use",
+    "type": "gif",
+    "path": "/assets/assests/gifs/use.gif"
+  },
+  {
+    "word": "utilize",
+    "type": "gif",
+    "path": "/assets/assests/gifs/utilize.gif"
+  },
+  {
+    "word": "wait",
+    "type": "gif",
+    "path": "/assets/assests/gifs/wait.gif"
+  },
+  {
+    "word": "want",
+    "type": "gif",
+    "path": "/assets/assests/gifs/want.gif"
+  },
+  {
+    "word": "what",
+    "type": "gif",
+    "path": "/assets/assests/gifs/what.gif"
+  },
+  {
+    "word": "when",
+    "type": "gif",
+    "path": "/assets/assests/gifs/when.gif"
+  },
+  {
+    "word": "where",
+    "type": "gif",
+    "path": "/assets/assests/gifs/where.gif"
+  },
+  {
+    "word": "which",
+    "type": "gif",
+    "path": "/assets/assests/gifs/which.gif"
+  },
+  {
+    "word": "who",
+    "type": "gif",
+    "path": "/assets/assests/gifs/who.gif"
+  },
+  {
+    "word": "why",
+    "type": "gif",
+    "path": "/assets/assests/gifs/why.gif"
+  },
+  {
+    "word": "will",
+    "type": "gif",
+    "path": "/assets/assests/gifs/will.gif"
+  },
+  {
+    "word": "with",
+    "type": "gif",
+    "path": "/assets/assests/gifs/with.gif"
+  },
+  {
+    "word": "woman",
+    "type": "gif",
+    "path": "/assets/assests/gifs/woman.gif"
+  },
+  {
+    "word": "work",
+    "type": "gif",
+    "path": "/assets/assests/gifs/work.gif"
+  },
+  {
+    "word": "write",
+    "type": "gif",
+    "path": "/assets/assests/gifs/write.gif"
+  },
+  {
+    "word": "yes",
+    "type": "gif",
+    "path": "/assets/assests/gifs/yes.gif"
+  },
+  {
+    "word": "you",
+    "type": "gif",
+    "path": "/assets/assests/gifs/you.gif"
+  },
+  {
+    "word": "your",
+    "type": "gif",
+    "path": "/assets/assests/gifs/your.gif"
+  }
+]

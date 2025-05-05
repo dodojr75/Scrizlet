@@ -1,0 +1,644 @@
+[
+  {
+    "id": "sign_again",
+    "term": "again",
+    "gif": "/assets/gifs/again.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_alive",
+    "term": "alive",
+    "gif": "/assets/gifs/alive.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_also",
+    "term": "also",
+    "gif": "/assets/gifs/also.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_ask",
+    "term": "ask",
+    "gif": "/assets/gifs/ask.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_bad",
+    "term": "bad",
+    "gif": "/assets/gifs/bad.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_boy",
+    "term": "boy",
+    "gif": "/assets/gifs/boy.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_but",
+    "term": "but",
+    "gif": "/assets/gifs/but.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_can",
+    "term": "can",
+    "gif": "/assets/gifs/can.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_come",
+    "term": "come",
+    "gif": "/assets/gifs/come.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_deaf",
+    "term": "deaf",
+    "gif": "/assets/gifs/deaf.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_different",
+    "term": "different",
+    "gif": "/assets/gifs/different.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_drink",
+    "term": "drink",
+    "gif": "/assets/gifs/drink.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_drive",
+    "term": "drive",
+    "gif": "/assets/gifs/drive.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_eat",
+    "term": "eat",
+    "gif": "/assets/gifs/eat.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_email",
+    "term": "email",
+    "gif": "/assets/gifs/email.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_excuse",
+    "term": "excuse",
+    "gif": "/assets/gifs/excuse.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_family",
+    "term": "family",
+    "gif": "/assets/gifs/family.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_feel",
+    "term": "feel",
+    "gif": "/assets/gifs/feel.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_few",
+    "term": "few",
+    "gif": "/assets/gifs/few.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_find",
+    "term": "find",
+    "gif": "/assets/gifs/find.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_fine",
+    "term": "fine",
+    "gif": "/assets/gifs/fine.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_fingerspelling_dactycology",
+    "term": "fingerspelling_dactycology",
+    "gif": "/assets/gifs/fingerspelling dactycology.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_fingerspelling",
+    "term": "fingerspelling",
+    "gif": "/assets/gifs/fingerspelling.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_finish",
+    "term": "finish",
+    "gif": "/assets/gifs/finish.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_food",
+    "term": "food",
+    "gif": "/assets/gifs/food.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_for",
+    "term": "for",
+    "gif": "/assets/gifs/for.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_forget",
+    "term": "forget",
+    "gif": "/assets/gifs/forget.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_friend",
+    "term": "friend",
+    "gif": "/assets/gifs/friend.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_get",
+    "term": "get",
+    "gif": "/assets/gifs/get.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_girl",
+    "term": "girl",
+    "gif": "/assets/gifs/girl.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_give",
+    "term": "give",
+    "gif": "/assets/gifs/give.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_go",
+    "term": "go",
+    "gif": "/assets/gifs/go.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_good",
+    "term": "good",
+    "gif": "/assets/gifs/good.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_have",
+    "term": "have",
+    "gif": "/assets/gifs/have.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_he",
+    "term": "he",
+    "gif": "/assets/gifs/he.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_hearing",
+    "term": "hearing",
+    "gif": "/assets/gifs/hearing.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_hello",
+    "term": "hello",
+    "gif": "/assets/gifs/hello.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_help",
+    "term": "help",
+    "gif": "/assets/gifs/help.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_home",
+    "term": "home",
+    "gif": "/assets/gifs/home.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_how",
+    "term": "how",
+    "gif": "/assets/gifs/how.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_internet",
+    "term": "internet",
+    "gif": "/assets/gifs/internet.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_know",
+    "term": "know",
+    "gif": "/assets/gifs/know.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_later",
+    "term": "later",
+    "gif": "/assets/gifs/later.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_like",
+    "term": "like",
+    "gif": "/assets/gifs/like.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_little",
+    "term": "little",
+    "gif": "/assets/gifs/little.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_live",
+    "term": "live",
+    "gif": "/assets/gifs/live.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_man",
+    "term": "man",
+    "gif": "/assets/gifs/man.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_many",
+    "term": "many",
+    "gif": "/assets/gifs/many.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_me",
+    "term": "me",
+    "gif": "/assets/gifs/me.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_meet",
+    "term": "meet",
+    "gif": "/assets/gifs/meet.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_more",
+    "term": "more",
+    "gif": "/assets/gifs/more.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_my",
+    "term": "my",
+    "gif": "/assets/gifs/my.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_name",
+    "term": "name",
+    "gif": "/assets/gifs/name.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_new",
+    "term": "new",
+    "gif": "/assets/gifs/new.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_no",
+    "term": "no",
+    "gif": "/assets/gifs/no.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_not",
+    "term": "not",
+    "gif": "/assets/gifs/not.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_now",
+    "term": "now",
+    "gif": "/assets/gifs/now.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_ok",
+    "term": "ok",
+    "gif": "/assets/gifs/ok.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_okay",
+    "term": "okay",
+    "gif": "/assets/gifs/okay.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_old",
+    "term": "old",
+    "gif": "/assets/gifs/old.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_other",
+    "term": "other",
+    "gif": "/assets/gifs/other.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_please",
+    "term": "please",
+    "gif": "/assets/gifs/please.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_remember",
+    "term": "remember",
+    "gif": "/assets/gifs/remember.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_same",
+    "term": "same",
+    "gif": "/assets/gifs/same.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_say",
+    "term": "say",
+    "gif": "/assets/gifs/say.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_school",
+    "term": "school",
+    "gif": "/assets/gifs/school.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_see",
+    "term": "see",
+    "gif": "/assets/gifs/see.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_she",
+    "term": "she",
+    "gif": "/assets/gifs/she.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_should",
+    "term": "should",
+    "gif": "/assets/gifs/should.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_sign",
+    "term": "sign",
+    "gif": "/assets/gifs/sign.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_signed_word",
+    "term": "signed_word",
+    "gif": "/assets/gifs/signed word.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_slow",
+    "term": "slow",
+    "gif": "/assets/gifs/slow.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_sms",
+    "term": "sms",
+    "gif": "/assets/gifs/sms.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_some",
+    "term": "some",
+    "gif": "/assets/gifs/some.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_sorry",
+    "term": "sorry",
+    "gif": "/assets/gifs/sorry.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_store",
+    "term": "store",
+    "gif": "/assets/gifs/store.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_take",
+    "term": "take",
+    "gif": "/assets/gifs/take.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_tell",
+    "term": "tell",
+    "gif": "/assets/gifs/tell.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_texting",
+    "term": "texting",
+    "gif": "/assets/gifs/texting.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_thank_you",
+    "term": "thank_you",
+    "gif": "/assets/gifs/thank you.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_thank",
+    "term": "thank",
+    "gif": "/assets/gifs/thank.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_thanks",
+    "term": "thanks",
+    "gif": "/assets/gifs/thanks.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_their",
+    "term": "their",
+    "gif": "/assets/gifs/their.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_they",
+    "term": "they",
+    "gif": "/assets/gifs/they.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_think",
+    "term": "think",
+    "gif": "/assets/gifs/think.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_time",
+    "term": "time",
+    "gif": "/assets/gifs/time.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_tired",
+    "term": "tired",
+    "gif": "/assets/gifs/tired.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_try",
+    "term": "try",
+    "gif": "/assets/gifs/try.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_understand",
+    "term": "understand",
+    "gif": "/assets/gifs/understand.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_use",
+    "term": "use",
+    "gif": "/assets/gifs/use.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_utilize",
+    "term": "utilize",
+    "gif": "/assets/gifs/utilize.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_wait",
+    "term": "wait",
+    "gif": "/assets/gifs/wait.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_want",
+    "term": "want",
+    "gif": "/assets/gifs/want.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_what",
+    "term": "what",
+    "gif": "/assets/gifs/what.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_when",
+    "term": "when",
+    "gif": "/assets/gifs/when.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_where",
+    "term": "where",
+    "gif": "/assets/gifs/where.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_which",
+    "term": "which",
+    "gif": "/assets/gifs/which.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_who",
+    "term": "who",
+    "gif": "/assets/gifs/who.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_why",
+    "term": "why",
+    "gif": "/assets/gifs/why.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_will",
+    "term": "will",
+    "gif": "/assets/gifs/will.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_with",
+    "term": "with",
+    "gif": "/assets/gifs/with.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_woman",
+    "term": "woman",
+    "gif": "/assets/gifs/woman.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_work",
+    "term": "work",
+    "gif": "/assets/gifs/work.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_write",
+    "term": "write",
+    "gif": "/assets/gifs/write.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_yes",
+    "term": "yes",
+    "gif": "/assets/gifs/yes.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_you",
+    "term": "you",
+    "gif": "/assets/gifs/you.gif",
+    "type": "word"
+  },
+  {
+    "id": "sign_your",
+    "term": "your",
+    "gif": "/assets/gifs/your.gif",
+    "type": "word"
+  }
+]

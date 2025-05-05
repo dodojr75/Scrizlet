@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    // 1. Targeting modern JS
+    // ———————————————————————————————
+    // Emit code using ES2020 features (e.g. optional chaining, nullish coalescing).
+    "target": "ES2020",
+
+    // 2. Class‑field semantics
+    // ———————————————————————————————
+    // Aligns TS’s output for `class` fields with the JS standard (using `define` under the hood).
+    "useDefineForClassFields": true,
+
+    // 3. Built‑in libraries
+    // ———————————————————————————————
+    // Which ambient definitions to include in your environment.
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    // 4. Modules
+    // ———————————————————————————————
+    // “ESNext” lets you use native `import`/`export` syntax. Vite will bundle/transpile accordingly.
+    "module": "ESNext",
+
+    // 5. Skip checking of `.d.ts` from node_modules for speed
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    // 6. Tell TS to resolve imports the same way your bundler (Vite/Rollup) does
+    "moduleResolution": "bundler",
+    // 7. Allow you to import files with explicit `.ts/.tsx` extension: `import "./foo.ts"`
+    "allowImportingTsExtensions": true,
+    // 8. Ensures each file can be safely transpiled in isolation (required by Vite)
+    "isolatedModules": true,
+    // 9. Force TS to treat any file with top‑level import/export as a module
+    "moduleDetection": "force",
+    // 10. Don’t emit any `.js`/`.d.ts` files—only type‑check. Vite handles actual output.
+    "noEmit": true,
+    // 11. JSX runtime
+    // “react-jsx” uses the new automatic JSX transform (no need to import React).
+    "jsx": "react-jsx",
+
+    /* Linting & Safety */
+    // 12. Enable all strict type‑checking options
+    "strict": true,
+    // 13. Prevent forgotten variables or parameters
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // 14. Catch switch statements missing `break`/`return`
+    "noFallthroughCasesInSwitch": true
+  },
+
+  // 15. Which files to include in the project
+  // ———————————————————————————————
+  // Only type‑check files under `src/`. Everything else (like tests or config)
+  // can be added here or excluded via a `"exclude"` block if needed.
+  "include": ["src"]
+}
